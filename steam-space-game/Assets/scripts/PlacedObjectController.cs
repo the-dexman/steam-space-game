@@ -42,7 +42,6 @@ public class PlacedObjectController : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
-
              
         }
         

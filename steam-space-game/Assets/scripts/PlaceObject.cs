@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlaceObject : MonoBehaviour
 {
     public GameObject conveyorObject;
+    public GameObject turnConveyorObject;
     public KeyCode conveyorKey;
+    public KeyCode turnConveyorKey;
     public Camera mainCamera;
     public bool isPlacing = false;
     // Start is called before the first frame update
@@ -24,6 +26,10 @@ public class PlaceObject : MonoBehaviour
         if (Input.GetKeyDown(conveyorKey))
         {
             Instantiate(conveyorObject, new Vector3(Mathf.Round(mousePoint.point.x), 1, Mathf.Round(mousePoint.point.z)), conveyorObject.transform.rotation);
+        }
+        else if (Input.GetKeyDown(turnConveyorKey))
+        {
+            Instantiate(turnConveyorObject, new Vector3(Mathf.Round(mousePoint.point.x), 1, Mathf.Round(mousePoint.point.z)), turnConveyorObject.transform.rotation);
         }
     }
 }
